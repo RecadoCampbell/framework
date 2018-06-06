@@ -163,7 +163,7 @@ class ValidatesEntity extends DataEntity
     protected function validate()
     {
         //Configuring validator
-        $this->validator->setData($this->getFields());
+        $this->validator->setData($this->getFields(false));
 
         //Drop all validation errors set by user
         $this->validator->flushRegistered();
